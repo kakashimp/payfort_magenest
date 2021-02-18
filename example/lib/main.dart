@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
+import 'package:payfort_magenest/PayFortSdk.dart';
 import 'package:payfort_magenest/payfort_magenest.dart';
-
 void main() {
   runApp(MyApp());
 }
@@ -42,6 +42,12 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  String _accessCode = 'CITvfqU60Yq1mDpBGtHd';
+  String _merchantIdentifier='10235cb6';
+  String language = 'ar';
+  String deviceId = '';
+  String phraseKey = '\$2y\$10\$orbzTowtU';
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -49,8 +55,18 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
-        body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+        body: InkWell(
+          onTap: ()async {
+            await PayfortMagenest.initialize(accessCode: _accessCode, merchantIdentifier: _merchantIdentifier, shaRequestPhrase: phraseKey, languageType: language,environment: PayfortEnvironments.TEST);
+            PayfortResponse val = await PayfortMagenest.request(accessCode: _accessCode, merchantReference: DateTime.now().millisecondsSinceEpoch.toString(), customerEmail: "test@joinly.com",
+                command: "AUTHORIZATION", currency: "AED", amount: "1000", languageType: language);
+
+            print("the end");
+            print(val.toJson());
+          },
+          child: Center(
+            child: Text('Running on: $_platformVersion\n'),
+          ),
         ),
       ),
     );
