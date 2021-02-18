@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/payfort_magenest.iml" filepath="$PROJECT_DIR$/payfort_magenest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/payfort_magenest_android.iml" filepath="$PROJECT_DIR$/android/payfort_magenest_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/android/payfort_magenest_example_android.iml" filepath="$PROJECT_DIR$/example/android/payfort_magenest_example_android.iml" />
+    </modules>
+  </component>
+</project>
