@@ -65,6 +65,12 @@ public class PayFortDelegate implements PluginRegistry.ActivityResultListener, I
     private void clearMethodCallAndResult() {
         pendingResult = null;
     }
+    private void closeDialogWhenError(){
+        PayFortPayment payFortPayment = new PayFortPayment(activity, this.fortCallback, this);
+        payFortPayment.closeDialog();
+    }
+
+
     private void finishWithSuccess(Map<String, Object> data) {
         if (pendingResult != null) {
             pendingResult.success(data);
@@ -98,6 +104,7 @@ public class PayFortDelegate implements PluginRegistry.ActivityResultListener, I
         }
         else {
             finishWithSuccess(responseData);
+            closeDialogWhenError();
         }
     }
 }

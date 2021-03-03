@@ -50,14 +50,6 @@ public class PayfortMagenestPlugin implements FlutterPlugin, MethodCallHandler, 
     PayFortDelegate delegate = plugin.setupActivity(registrar.activity());
     registrar.addActivityResultListener(delegate);
   }
-//
-//  public static void registerWith(Registrar registrar) {
-//    PayfortFlutterPlugin plugin = new PayfortFlutterPlugin();
-//
-//    plugin.setupEngine(registrar.messenger());
-//    PayFortDelegate delegate = plugin.setupActivity(registrar.activity());
-//    registrar.addActivityResultListener(delegate);
-//  }
 
 
   private void setupEngine(BinaryMessenger messenger) {
@@ -79,6 +71,7 @@ public class PayfortMagenestPlugin implements FlutterPlugin, MethodCallHandler, 
       Config.setShaRequestPhrase((String) call.argument("shaRequestPhrase"));
       Config.setLanguageType((String) call.argument("languageType"));
       Config.setEnvironment((String) call.argument("environment"));
+
       result.success("");
     } else if (call.method.equals("request")) {
       delegate.requestForPayfortPayment(call, result);

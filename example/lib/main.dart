@@ -4,6 +4,7 @@ import 'dart:async';
 import 'package:flutter/services.dart';
 import 'package:payfort_magenest/PayFortSdk.dart';
 import 'package:payfort_magenest/payfort_magenest.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -42,11 +43,17 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
-  String _accessCode = 'CITvfqU60Yq1mDpBGtHd';
-  String _merchantIdentifier='10235cb6';
-  String language = 'ar';
+  // String _accessCode = 'CITvfqU60Yq1mDpBGtHd';
+  // String _merchantIdentifier = '10235cb6';
+  // String language = 'en';
+  // String deviceId = '';
+  // String phraseKey = '\$2y\$10\$orbzTowtUss';
+
+  String _accessCode = 'dLKGzQF4AXS5TDwxpW1B';
+  String _merchantIdentifier = '7c264c95';
+  String language = 'en';
   String deviceId = '';
-  String phraseKey = '\$2y\$10\$orbzTowtU';
+  String phraseKey = '\$2y\$10\$aGAMdMD1E';
 
   @override
   Widget build(BuildContext context) {
@@ -56,10 +63,22 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: InkWell(
-          onTap: ()async {
-            await PayfortMagenest.initialize(accessCode: _accessCode, merchantIdentifier: _merchantIdentifier, shaRequestPhrase: phraseKey, languageType: language,environment: PayfortEnvironments.TEST);
-            PayfortResponse val = await PayfortMagenest.request(accessCode: _accessCode, merchantReference: DateTime.now().millisecondsSinceEpoch.toString(), customerEmail: "test@joinly.com",
-                command: "AUTHORIZATION", currency: "AED", amount: "1000", languageType: language);
+          onTap: () async {
+            await PayfortMagenest.initialize(
+                accessCode: _accessCode,
+                merchantIdentifier: _merchantIdentifier,
+                shaRequestPhrase: phraseKey,
+                languageType: language,
+                environment: PayfortEnvironments.TEST);
+            PayfortResponse val = await PayfortMagenest.request(
+                accessCode: _accessCode,
+                merchantReference:
+                    DateTime.now().millisecondsSinceEpoch.toString(),
+                customerEmail: "test@joinly.com",
+                command: "AUTHORIZATION",
+                currency: "USD",
+                amount: "1000",
+                languageType: language);
 
             print("the end");
             print(val.toJson());

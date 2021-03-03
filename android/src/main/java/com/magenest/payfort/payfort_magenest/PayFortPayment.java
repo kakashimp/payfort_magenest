@@ -78,6 +78,9 @@ public class PayFortPayment {
         sdkToken = "";
         gson = new Gson();
     }
+    public void closeDialog(){
+        progressDialog.dismiss();
+    }
 
     public void requestForPayment(PayFortData payFortData) {
         this.payFortData = payFortData;
@@ -123,6 +126,7 @@ public class PayFortPayment {
                     });
         } catch (Exception e) {
             e.printStackTrace();
+
         }
     }
 
