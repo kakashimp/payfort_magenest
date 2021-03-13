@@ -79,6 +79,7 @@ public class PayFortPayment {
         gson = new Gson();
     }
     public void closeDialog(){
+        progressDialog.hide();
         progressDialog.dismiss();
     }
 
@@ -107,7 +108,7 @@ public class PayFortPayment {
                     JSONObject response = new JSONObject(fortResponseMap);
                     PayFortData payFortData = gson.fromJson(response.toString(), PayFortData.class);
                     payFortData.paymentResponse = response.toString();
-                    Log.e("Success Response", response.toString());
+                    Log.e("Success Response", "Success");
                     if (iPaymentRequestCallBack != null) {
                         iPaymentRequestCallBack.onPaymentRequestResponse(RESPONSE_PURCHASE_SUCCESS, fortResponseMap);
                     }
@@ -120,6 +121,7 @@ public class PayFortPayment {
                     payFortData.paymentResponse = response.toString();
                     Log.e("Failure Response", response.toString());
                     if (iPaymentRequestCallBack != null) {
+                        progressDialog.dismiss();
                         iPaymentRequestCallBack.onPaymentRequestResponse(RESPONSE_PURCHASE_FAILURE, fortResponseMap);
                     }
                 }

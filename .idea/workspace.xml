@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/java/com/magenest/payfort/payfort_magenest/PayFortDelegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/magenest/payfort/payfort_magenest/PayFortDelegate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/java/com/magenest/payfort/payfort_magenest/PayFortPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/magenest/payfort/payfort_magenest/PayFortPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/magenest/payfort/payfort_magenest/PayfortMagenestPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/magenest/payfort/payfort_magenest/PayfortMagenestPlugin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +16,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[1cd8206cd60b7ece]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_API_29]" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -53,25 +52,33 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="302" y="144" width="1269" height="747" key="AVDManager" timestamp="1615598795219">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="302" y="144" width="1269" height="747" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1615598795219" />
     <state x="856" y="272" key="FileChooserDialogImpl" timestamp="1614741851706">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="856" y="272" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1614741851706" />
-    <state width="1409" height="293" key="GridCell.Tab.0.bottom" timestamp="1614751692580">
+    <state width="1351" height="288" key="GridCell.Tab.0.bottom" timestamp="1615601759048">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1409" height="293" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1614751692580" />
-    <state width="1409" height="293" key="GridCell.Tab.0.center" timestamp="1614751692580">
+    <state width="1351" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1615601759048" />
+    <state width="1351" height="288" key="GridCell.Tab.0.center" timestamp="1615601759048">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1409" height="293" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1614751692580" />
-    <state width="1409" height="293" key="GridCell.Tab.0.left" timestamp="1614751692580">
+    <state width="1351" height="288" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1615601759048" />
+    <state width="1351" height="288" key="GridCell.Tab.0.left" timestamp="1615601759048">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1409" height="293" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1614751692580" />
-    <state width="1409" height="293" key="GridCell.Tab.0.right" timestamp="1614751692580">
+    <state width="1351" height="288" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1615601759048" />
+    <state width="1351" height="288" key="GridCell.Tab.0.right" timestamp="1615601759048">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1409" height="293" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1614751692580" />
+    <state width="1351" height="288" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1615601759048" />
+    <state x="1278" y="258" width="585" height="534" key="find.popup" timestamp="1614754192569">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1278" y="258" width="585" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1614754192569" />
   </component>
 </project>

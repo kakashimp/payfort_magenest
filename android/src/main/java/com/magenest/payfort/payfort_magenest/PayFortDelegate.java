@@ -2,6 +2,7 @@ package com.magenest.payfort.payfort_magenest;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 
 import com.magenest.payfort.payfort_magenest.model.PayFortData;
 import com.payfort.fort.android.sdk.base.callbacks.FortCallBackManager;
@@ -80,6 +81,7 @@ public class PayFortDelegate implements PluginRegistry.ActivityResultListener, I
 
     private void finishWithError(String errorCode, String errorMessage, Throwable throwable) {
         if (pendingResult != null) {
+            closeDialogWhenError();
             pendingResult.error(errorCode, errorMessage, throwable);
             clearMethodCallAndResult();
         }
@@ -100,11 +102,9 @@ public class PayFortDelegate implements PluginRegistry.ActivityResultListener, I
         if(responseType == RESPONSE_PURCHASE_CANCEL || responseType == RESPONSE_PURCHASE_FAILURE)
         {
             finishWithSuccess(responseData);
-            //finishWithError("payfortError" , "fail" , responseData);
         }
         else {
             finishWithSuccess(responseData);
-            closeDialogWhenError();
         }
     }
 }
