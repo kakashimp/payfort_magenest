@@ -74,7 +74,7 @@ class _MyAppState extends State<MyApp> {
                 accessCode: _accessCode,
                 merchantReference:
                     DateTime.now().millisecondsSinceEpoch.toString(),
-                customerEmail: "test@joinly.com",
+                customerEmail: "test@gmail.com",
                 command: "AUTHORIZATION",
                 currency: "USD",
                 amount: "1000",
